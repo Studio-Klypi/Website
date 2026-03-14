@@ -8,7 +8,7 @@ defineProps<{ section: ProjectMediaSection }>();
   <div class="flex flex-col gap-1.5">
     <iframe
       class="aspect-video rounded-xl overflow-hidden w-full"
-      :src="`${section.content.src}&rel=0`"
+      :src="`${section.content.src}&rel=0&playsinline=0`"
       :title="section.content.alt ?? 'Youtube Video Player'"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
