@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProjectCarouselSection } from "~/types/entities/project";
+import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
 defineProps<{ section: ProjectCarouselSection }>();
 </script>
@@ -23,12 +24,10 @@ defineProps<{ section: ProjectCarouselSection }>();
         >
           {{ item.title }}
         </h3>
-        <p
+        <MarkdownRenderer
           v-if="item.description"
-          class="text-sm text-muted-foreground"
-        >
-          {{ item.description }}
-        </p>
+          :content="item.description"
+        />
       </UiCarouselItem>
     </UiCarouselContent>
     <div class="flex items-center justify-center gap-2">

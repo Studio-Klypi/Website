@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Listed } from "~/types/generic/object";
+import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
 defineProps<{ items: Listed<string> }>();
 </script>
@@ -10,7 +11,7 @@ defineProps<{ items: Listed<string> }>();
       v-for="(item, index) in items"
       :key="index"
     >
-      {{ item }}
+      <MarkdownRenderer :content="item" />
     </li>
   </ul>
 </template>

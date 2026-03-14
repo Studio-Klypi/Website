@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProjectAccordionSection } from "~/types/entities/project";
+import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
 defineProps<{ section: ProjectAccordionSection }>();
 </script>
@@ -20,7 +21,7 @@ defineProps<{ section: ProjectAccordionSection }>();
       >
         <UiAccordionTrigger>{{ item.title }}</UiAccordionTrigger>
         <UiAccordionContent class="text-pretty whitespace-pre-line">
-          {{ item.content }}
+          <MarkdownRenderer :content="item.content" />
         </UiAccordionContent>
       </UiAccordionItem>
     </UiAccordion>

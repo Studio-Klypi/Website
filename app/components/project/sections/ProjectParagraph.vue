@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ProjectParagraphSection } from "~/types/entities/project";
+import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
 defineProps<{ section: ProjectParagraphSection }>();
 </script>
@@ -12,6 +13,6 @@ defineProps<{ section: ProjectParagraphSection }>();
     >
       {{ section.content.title }}
     </h2>
-    <p>{{ section.content.text }}</p>
+    <MarkdownRenderer :content="section.content.text" />
   </div>
 </template>
