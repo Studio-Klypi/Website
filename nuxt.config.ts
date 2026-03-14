@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@nuxtjs/i18n",
     "@nuxt/image",
+    "@pinia/nuxt",
   ],
   devtools: { enabled: true },
   css: ["./tailwind.css"],
@@ -16,6 +17,13 @@ export default defineNuxtConfig({
     preference: "system",
     fallback: "light",
     storageKey: "klypi-color-scheme",
+  },
+  runtimeConfig: {
+    public: {
+      api: {
+        url: "",
+      },
+    },
   },
   compatibilityDate: "2025-07-15",
   vite: {

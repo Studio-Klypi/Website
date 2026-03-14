@@ -8,7 +8,12 @@ const props = withDefaults(defineProps<PageProps>(), {
   name: "home",
 });
 
-useSeoMeta({
+if (props.seoData) useSeoMeta({
+  title: props.seoData.title,
+  description: props.seoData.description,
+  author: props.seoData.author,
+});
+else if (props.seoKey) useSeoMeta({
   title: t(`${props.seoKey}.seo.title`),
   description: t(`${props.seoKey}.seo.description`),
 });
