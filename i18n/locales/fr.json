@@ -1,6 +1,13 @@
 {
   "btn": {},
-  "labels": {},
+  "labels": {
+    "dates": {
+      "formats": {
+        "medium": "dd MMMM yyyy"
+      },
+      "updated-at": "Mis à jour le {date} | Mise à jour le {date}"
+    }
+  },
   "toasts": {},
 
   "home": {

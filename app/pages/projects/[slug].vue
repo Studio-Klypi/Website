@@ -2,7 +2,10 @@
 import type { Project } from "~/types/entities/project";
 import Page from "~/components/composing/Page.vue";
 import ProjectSection from "~/components/project/ProjectSection.vue";
+import { formatDate } from "date-fns";
+import * as locales from "date-fns/locale";
 
+const { locale } = useI18n();
 const store = useProjectStore();
 
 const route = useRoute();
@@ -40,7 +43,7 @@ const project = ref<Project>(await store.getProject(slug as string));
       </div>
     </header>
 
-    <main class="flex flex-col gap-4">
+    <main class="flex flex-col gap-8">
       <ProjectSection
         v-for="section in project.sections"
         :key="section.key"
@@ -49,7 +52,7 @@ const project = ref<Project>(await store.getProject(slug as string));
     </main>
 
     <footer class="flex items-center justify-end">
-      <span class="text-sm text-muted-foreground italic">Mis à jour le {{ project.updatedAt }}</span>
+      <span class="text-sm text-muted-foreground italic">{{ $t("labels.dates.updated-at", 1, { named: { date: formatDate(project.updatedAt, $t("labels.dates.formats.medium"), { locale: locales[locale] }) } }) }}</span>
     </footer>
   </Page>
 </template>
