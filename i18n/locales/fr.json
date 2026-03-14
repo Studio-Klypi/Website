@@ -1,0 +1,13 @@
+{
+  "btn": {},
+  "labels": {},
+  "toasts": {},
+
+  "home": {
+    "navigation-name": "Accueil",
+    "seo": {
+      "title": "Studio Klypi - Développement web et Photographie",
+      "description": "Bienvenue chez Studio Klypi. Ici, on mêle développement web et photographie pour développer des produits UNIQUES ! Venez découvrir notre travail."
+    }
+  }
+}
