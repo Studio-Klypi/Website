@@ -77,7 +77,7 @@ const submit = form.handleSubmit(async (values) => {
             <UiInput
               v-bind="componentField"
               type="email"
-              :placeholder="$t('labels.form.fields.email.placeholder')"
+              :placeholder="$t('labels.form.fields.email.placeholder', { at: '@' })"
             />
           </UiFormControl>
           <UiFormMessage />
