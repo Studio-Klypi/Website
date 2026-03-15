@@ -14,11 +14,11 @@ const { loading, send } = useContactForm();
 const form = useForm({
   validationSchema: toTypedSchema(z.object({
     type: z.enum(ContactTypes),
-    firstName: z.string({ message: t("contact.form.fields.first-name.error") }),
-    lastName: z.string({ message: t("contact.form.fields.last-name.error") }),
-    email: z.string({ message: t("contact.form.fields.email.error.required") }).email({ message: t("contact.form.fields.email.error.invalid") }),
+    firstName: z.string({ message: t("labels.form.fields.first-name.error") }),
+    lastName: z.string({ message: t("labels.form.fields.last-name.error") }),
+    email: z.string({ message: t("labels.form.fields.email.error.required") }).email({ message: t("labels.form.fields.email.error.invalid") }),
     subject: z.string({ message: t("contact.form.fields.subject.error.required") }).max(SUBJECT_MAX_LENGTH, { message: t("contact.form.fields.subject.error.max-length", { count: SUBJECT_MAX_LENGTH }) }),
-    message: z.string({ message: t("contact.form.fields.message.error.required") }).max(MESSAGE_MAX_LENGTH, { message: t("contact.form.fields.message.error.max-length", { count: MESSAGE_MAX_LENGTH }) }),
+    message: z.string({ message: t("labels.form.fields.message.error.required") }).max(MESSAGE_MAX_LENGTH, { message: t("labels.form.fields.message.error.max-length", { count: MESSAGE_MAX_LENGTH }) }),
   })),
   initialValues: {
     type: ContactTypes[0],
@@ -79,12 +79,12 @@ const submit = form.handleSubmit(async (values) => {
         name="firstName"
       >
         <UiFormItem>
-          <UiFormLabel>{{ $t("contact.form.fields.first-name.label") }}</UiFormLabel>
+          <UiFormLabel>{{ $t("labels.form.fields.first-name.label") }}</UiFormLabel>
           <UiFormControl>
             <UiInput
               v-bind="componentField"
               :disabled="loading"
-              :placeholder="$t('contact.form.fields.first-name.placeholder')"
+              :placeholder="$t('labels.form.fields.first-name.placeholder')"
             />
           </UiFormControl>
           <UiFormMessage />
@@ -95,12 +95,12 @@ const submit = form.handleSubmit(async (values) => {
         name="lastName"
       >
         <UiFormItem>
-          <UiFormLabel>{{ $t("contact.form.fields.last-name.label") }}</UiFormLabel>
+          <UiFormLabel>{{ $t("labels.form.fields.last-name.label") }}</UiFormLabel>
           <UiFormControl>
             <UiInput
               v-bind="componentField"
               :disabled="loading"
-              :placeholder="$t('contact.form.fields.last-name.placeholder')"
+              :placeholder="$t('labels.form.fields.last-name.placeholder')"
             />
           </UiFormControl>
           <UiFormMessage />
@@ -111,13 +111,13 @@ const submit = form.handleSubmit(async (values) => {
         name="email"
       >
         <UiFormItem class="@lg/page:col-span-2">
-          <UiFormLabel>{{ $t("contact.form.fields.email.label") }}</UiFormLabel>
+          <UiFormLabel>{{ $t("labels.form.fields.email.label") }}</UiFormLabel>
           <UiFormControl>
             <UiInput
               v-bind="componentField"
               type="email"
               :disabled="loading"
-              :placeholder="$t('contact.form.fields.email.placeholder', { at: '@' })"
+              :placeholder="$t('labels.form.fields.email.placeholder', { at: '@' })"
             />
           </UiFormControl>
           <UiFormMessage />
@@ -145,17 +145,17 @@ const submit = form.handleSubmit(async (values) => {
         name="message"
       >
         <UiFormItem class="@lg/page:col-span-2">
-          <UiFormLabel>{{ $t("contact.form.fields.message.label") }}</UiFormLabel>
+          <UiFormLabel>{{ $t("labels.form.fields.message.label") }}</UiFormLabel>
           <UiFormControl>
             <UiTextarea
               v-bind="componentField"
               class="min-h-64 resize-none"
               :disabled="loading"
-              :placeholder="$t('contact.form.fields.message.placeholder')"
+              :placeholder="$t('labels.form.fields.message.placeholder')"
             />
           </UiFormControl>
           <UiFormDescription>
-            {{ $t("contact.form.fields.message.description") }}
+            {{ $t("labels.form.fields.message.description") }}
           </UiFormDescription>
           <UiFormMessage />
         </UiFormItem>
