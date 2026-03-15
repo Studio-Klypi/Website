@@ -1,5 +1,7 @@
 {
-  "btn": {},
+  "btn": {
+    "send": "Envoyer"
+  },
   "labels": {
     "dates": {
       "formats": {
@@ -8,13 +10,84 @@
       "updated-at": "Mis à jour le {date} | Mise à jour le {date}"
     }
   },
-  "toasts": {},
+  "toasts": {
+    "message-sent": {
+      "title": "Merci !",
+      "description": "Nous avons bien réceptionné votre message."
+    },
+    "error": {
+      "default": {
+        "title": "Oups...",
+        "description": "Une erreur s'est produite !"
+      }
+    }
+  },
 
   "home": {
     "navigation-name": "Accueil",
     "seo": {
       "title": "Studio Klypi - Développement web et Photographie",
       "description": "Bienvenue chez Studio Klypi. Ici, on mêle développement web et photographie pour développer des produits UNIQUES ! Venez découvrir notre travail."
+    }
+  },
+  "contact": {
+    "navigation-name": "Contact",
+    "seo": {
+      "title": "Studio Klypi - Nous contacter",
+      "description": "Vous avez un projet, vous souhaitez vous associer ou nous sponsoriser ? Contactez-nous !"
+    },
+    "form": {
+      "fields": {
+        "type": {
+          "label": "Type de demande",
+          "options": {
+            "contact": "Prise de contact",
+            "quote": "Demande de devis",
+            "partnership": "Demande de partenariat",
+            "sponsoring": "Demande de sponsoring"
+          }
+        },
+        "first-name": {
+          "label": "Prénom",
+          "placeholder": "John",
+          "error": "Le prénom est requis !"
+        },
+        "last-name": {
+          "label": "Nom",
+          "placeholder": "DOE",
+          "error": "Le nom est requis !"
+        },
+        "email": {
+          "label": "Adresse email",
+          "placeholder": "john.doe{at}exemple.fr",
+          "error": {
+            "required": "L'adresse email est requise !",
+            "invalid": "Veuillez renseigner une adresse email valide !"
+          }
+        },
+        "subject": {
+          "label": "Sujet",
+          "placeholder": "Organisation, projet, ...",
+          "options": {
+            "quote": "Création d'un devis sur-mesure",
+            "partnership": "Proposition de partenariat",
+            "sponsoring": "Proposition de sponsoring"
+          },
+          "error": {
+            "required": "Le sujet est requis !",
+            "max-length": "Le sujet ne doit pas dépasser {count} caractères !"
+          }
+        },
+        "message": {
+          "label": "Message",
+          "description": "La syntaxe markdown est supportée pour ce champ.",
+          "placeholder": "Bonjour, je suis ...",
+          "error": {
+            "required": "Le message est requis !",
+            "max-length": "Le message ne doit pas dépasser {count} caractères !"
+          }
+        }
+      }
     }
   }
 }

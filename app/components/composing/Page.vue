@@ -22,7 +22,7 @@ else if (props.seoKey) useSeoMeta({
 <template>
   <main
     :data-page-name="props.name"
-    :class="cn('', props.class)"
+    :class="cn('@container/page', props.class)"
   >
     <div
       v-if="props.wrapper"

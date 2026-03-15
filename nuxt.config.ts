@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  imports: {
+    dirs: ["composables/**"],
+  },
   compatibilityDate: "2025-07-15",
   vite: {
     optimizeDeps: {
