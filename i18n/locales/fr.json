@@ -8,12 +8,50 @@
         "medium": "dd MMMM yyyy"
       },
       "updated-at": "Mis à jour le {date} | Mise à jour le {date}"
+    },
+    "form": {
+      "fields": {
+        "first-name": {
+          "label": "Prénom",
+          "placeholder": "John",
+          "error": "Le prénom est requis !"
+        },
+        "last-name": {
+          "label": "Nom",
+          "placeholder": "DOE",
+          "error": "Le nom est requis !"
+        },
+        "email": {
+          "label": "Adresse email",
+          "placeholder": "john.doe{at}exemple.fr",
+          "error": {
+            "required": "L'adresse email est requise !",
+            "invalid": "Veuillez renseigner une adresse email valide !"
+          }
+        },
+        "message": {
+          "label": "Message",
+          "description": "La syntaxe markdown est supportée pour ce champ.",
+          "placeholder": "Bonjour, je suis ...",
+          "error": {
+            "required": "Le message est requis !",
+            "max-length": "Le message ne doit pas dépasser {count} caractères !"
+          }
+        }
+      }
+    },
+    "state": {
+      "optional": "(facultatif) | (facultative)"
     }
   },
   "toasts": {
     "message-sent": {
       "title": "Merci !",
       "description": "Nous avons bien réceptionné votre message."
+    },
+    "testimonial-sent": {
+      "title": "Merci !",
+      "description": "Nous avons bien réceptionné votre témoignage."
     },
     "error": {
       "default": {
@@ -47,24 +85,6 @@
             "sponsoring": "Demande de sponsoring"
           }
         },
-        "first-name": {
-          "label": "Prénom",
-          "placeholder": "John",
-          "error": "Le prénom est requis !"
-        },
-        "last-name": {
-          "label": "Nom",
-          "placeholder": "DOE",
-          "error": "Le nom est requis !"
-        },
-        "email": {
-          "label": "Adresse email",
-          "placeholder": "john.doe{at}exemple.fr",
-          "error": {
-            "required": "L'adresse email est requise !",
-            "invalid": "Veuillez renseigner une adresse email valide !"
-          }
-        },
         "subject": {
           "label": "Sujet",
           "placeholder": "Organisation, projet, ...",
@@ -77,15 +97,22 @@
             "required": "Le sujet est requis !",
             "max-length": "Le sujet ne doit pas dépasser {count} caractères !"
           }
-        },
-        "message": {
-          "label": "Message",
-          "description": "La syntaxe markdown est supportée pour ce champ.",
-          "placeholder": "Bonjour, je suis ...",
-          "error": {
-            "required": "Le message est requis !",
-            "max-length": "Le message ne doit pas dépasser {count} caractères !"
-          }
+        }
+      }
+    }
+  },
+  "new-testimonial": {
+    "navigation-name": "Studio Klypi - Nouveau témoignage",
+    "seo": {
+      "title": "Studio Klypi - Nouveau témoignage",
+      "description": "Un témoignage constructif permet de construire la réalité de Studio Klypi. Rédigez le vôtre pour faire connaître votre expérience avec notre accompagnement."
+    },
+    "form": {
+      "fields": {
+        "role": {
+          "label": "Fonction",
+          "placeholder": "Développeur web, photographe, ...",
+          "error": "La fonction ne doit pas dépasser {count} caractères !"
         }
       }
     }
