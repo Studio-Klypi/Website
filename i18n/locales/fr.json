@@ -104,6 +104,41 @@
       "description": "Bienvenue chez Studio Klypi. Ici, on mêle développement web et photographie pour développer des produits UNIQUES ! Venez découvrir notre travail."
     }
   },
+  "services": {
+    "navigation-name": "Services",
+    "home": {
+      "seo": {
+        "title": "Nos services",
+        "description": "Studio Klypi accompagne entreprises, collectivités et particuliers dans la création de projets digitaux et visuels.\nDu développement web à la production d’images, chaque prestation est pensée pour donner vie aux idées et valoriser les projets."
+      },
+      "services": {
+        "web-site": {
+          "title": "Site Internet",
+          "description": "Conception et développement de sites web modernes, performants et adaptés à vos besoins : site vitrine, plateforme sur mesure ou présence en ligne optimisée."
+        },
+        "web-app": {
+          "title": "Application web",
+          "description": "Développement d’applications et d’outils digitaux sur mesure pour automatiser des processus, structurer des projets ou créer de nouvelles expériences numériques."
+        },
+        "event-photo": {
+          "title": "Photographie d’événement",
+          "description": "Couverture photographique de vos événements : conférences, soirées, inaugurations ou moments importants, afin de capturer l’ambiance et les instants clés."
+        },
+        "studio-photo": {
+          "title": "Photographie studio",
+          "description": "Portraits, projets créatifs ou visuels professionnels réalisés en studio avec un travail précis sur la lumière et la mise en scène."
+        },
+        "event-video": {
+          "title": "Captation d’événement",
+          "description": "Captation vidéo de conférences, spectacles ou événements professionnels pour conserver une trace fidèle et exploitable de vos moments importants."
+        },
+        "shooting-video": {
+          "title": "Tournage vidéo",
+          "description": "Production de vidéos pour présenter un projet, une entreprise ou raconter une histoire à travers l’image."
+        }
+      }
+    }
+  },
   "about": {
     "navigation-name": "À propos",
     "seo": {
