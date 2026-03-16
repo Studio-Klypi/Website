@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { cn } from "~/lib/utils";
+import type { HTMLAttributes } from "vue";
 
 interface MarkdownRendererProps {
   content: string;
   useMarkdown?: boolean;
-  class?: string;
+  class?: HTMLAttributes["class"];
 }
 
 const props = withDefaults(defineProps<MarkdownRendererProps>(), {
