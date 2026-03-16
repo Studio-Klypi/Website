@@ -13,6 +13,17 @@ export default defineNuxtConfig({
     dirs: ["composables/**"],
   },
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/favicon.png",
+        },
+      ],
+    },
+  },
   css: ["./tailwind.css"],
   colorMode: {
     classPrefix: "",
