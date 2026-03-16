@@ -108,9 +108,10 @@
     "navigation-name": "Services",
     "home": {
       "seo": {
-        "title": "Nos services",
+        "title": "Studio Klypi - Nos services",
         "description": "Studio Klypi accompagne entreprises, collectivités et particuliers dans la création de projets digitaux et visuels.\nDu développement web à la production d’images, chaque prestation est pensée pour donner vie aux idées et valoriser les projets."
       },
+      "title": "Nos services",
       "services": {
         "web-site": {
           "title": "Site Internet",

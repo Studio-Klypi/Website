@@ -42,7 +42,7 @@ const services = [
     <section class="py-24 flex flex-col gap-12">
       <header class="grid gap-1.5">
         <h1 class="text-5xl font-bold">
-          {{ $t("services.home.seo.title") }}
+          {{ $t("services.home.title") }}
         </h1>
         <p class="text-muted-foreground max-w-[60ch]">
           {{ $t("services.home.seo.description") }}
