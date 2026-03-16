@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@pinia/nuxt",
   ],
+  imports: {
+    dirs: ["composables/**"],
+  },
   devtools: { enabled: true },
   css: ["./tailwind.css"],
   colorMode: {
@@ -24,9 +27,6 @@ export default defineNuxtConfig({
         url: "",
       },
     },
-  },
-  imports: {
-    dirs: ["composables/**"],
   },
   compatibilityDate: "2025-07-15",
   vite: {
