@@ -61,11 +61,81 @@
     }
   },
 
+  "layout": {
+    "faq": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "question": "Avec qui travaille Studio Klypi ?",
+          "answer": "Studio Klypi accompagne une grande variété de projets : PME, indépendants, associations, municipalités et particuliers. Le studio privilégie les collaborations locales, mais reste ouvert aux projets à distance en France."
+        },
+        {
+          "question": "Quels types de projet réalisez-vous le plus souvent ?",
+          "answer": "Le studio intervient principalement sur la création de sites web, le développement d'applications web et la production d'images. Cela inclut notamment les sites vitrines, les outils digitaux sur mesure, ainsi que la photographie, la vidéo et les captations événementielles."
+        },
+        {
+          "question": "Combien coûte un site internet ?",
+          "answer": "Chaque projet est différent. Les tarifs sont donc définis sur mesure, en fonction de l'ampleur du projet, des fonctionnalités attendues et des objectifs. Un premier échange permet généralement de définir les besoins et d'établir un cahier des charges clair avant toute proposition."
+        },
+        {
+          "question": "Combien de temps faut-il pour créer un site web ?",
+          "answer": "La réalisation d'un site vitrine prend généralement entre 2 et 6 semaines, selon les fonctionnalités souhaitées (réservation, blog, espace client, etc.). Les projets plus complexes, comme les applications web ou les plateformes sur mesure, nécessitent naturellement plus de temps."
+        },
+        {
+          "question": "Comment démarre un projet avec Studio Klypi ?",
+          "answer": "Tout commence par un premier échange afin de comprendre le projet, les objectifs et les contraintes. Si nécessaire, le studio aide à formaliser un cahier des charges afin de cadrer précisément le travail avant le lancement du projet."
+        },
+        {
+          "question": "Travaillez-vous seul ou en équipe ?",
+          "answer": "Studio Klypi est un studio indépendant fondé par Loïc. Selon les besoins du projet, il peut s'entourer de partenaires spécialisés afin d'augmenter l'efficacité, réduire les délais, ou apporter des compétences complémentaires."
+        },
+        {
+          "question": "Peut-on travailler avec vous à distance ?",
+          "answer": "Oui. Les projets peuvent être menés entièrement à distance. Les échanges se font principalement en visioconférence, souvent enregistrés afin de conserver un suivi clair et précis des décisions et des avancées du projet."
+        }
+      ]
+    }
+  },
+
   "home": {
     "navigation-name": "Accueil",
     "seo": {
       "title": "Studio Klypi - Développement web et Photographie",
       "description": "Bienvenue chez Studio Klypi. Ici, on mêle développement web et photographie pour développer des produits UNIQUES ! Venez découvrir notre travail."
+    }
+  },
+  "about": {
+    "navigation-name": "À propos",
+    "seo": {
+      "title": "Studio Klypi - Nous connaître",
+      "description": "Studio Klypi est né en mars 2022 d'une envie simple : créer et aider les projets à prendre vie."
+    },
+    "sections": {
+      "quote": {
+        "caption": "À propos",
+        "text": "Studio Klypi accompagne les projets ambitieux à travers le digital et l'image."
+      },
+      "story": {
+        "title": "Un peu d'histoire",
+        "content": "Studio Klypi est né en mars 2022 d'une envie simple : créer et aider les projets à prendre vie.\n\nAprès avoir dû interrompre ses études pour des raisons de santé, Loïc choisit de transformer cette période en opportunité. Passionné par le développement web et l'apprentissage autodidacte, il décide de mettre ses compétences au service des autres en fondant Studio Klypi.\n\nDepuis toujours, la création est au cœur de sa démarche : concevoir des sites web, développer des outils, expérimenter avec la technologie ou imaginer de nouveaux projets. Une approche qui mêle naturellement technique et créativité.\n\nAujourd'hui, Studio Klypi accompagne entreprises et particuliers dans la conception d'expériences digitales et visuelles, avec une attention particulière portée à la qualité, aux détails et à l'utilité des projets."
+      },
+      "team": {
+        "title": "L'équipe",
+        "disclaimer": "Selon les projets, le studio s'entoure de partenaires spécialisés.",
+        "jobs": {
+          "loic": "Fondateur / Développement / Directeur créatif"
+        }
+      },
+      "method": {
+        "title": "Notre méthode",
+        "description": "Chez Studio Klypi, on suit une méthode claire :",
+        "steps": [
+          "Comprendre le projet",
+          "Concevoir une solution",
+          "Produire avec exigence",
+          "Livrer et accompagner"
+        ]
+      }
     }
   },
   "contact": {
