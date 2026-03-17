@@ -10,3 +10,13 @@ export interface TestimonialSendBody {
   role: Nullable<string>;
   text: string;
 }
+
+export interface Testimonial {
+  id: number;
+  firstName: string;
+  lastName: string;
+  text: string;
+  avatar: Nullable<string>;
+  role: Nullable<string>;
+  createdAt: Date;
+}
