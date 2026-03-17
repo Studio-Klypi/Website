@@ -137,6 +137,11 @@
           "title": "Tournage vidéo",
           "description": "Production de vidéos pour présenter un projet, une entreprise ou raconter une histoire à travers l’image."
         }
+      },
+      "cta": {
+        "title": "Parlons de votre projet",
+        "description": "Vous avez une idée, un besoin ou simplement une question ?\nStudio Klypi vous accompagne dans la création de votre projet digital ou visuel, de la réflexion à la réalisation.",
+        "action": "Présentez votre projet"
       }
     }
   },
