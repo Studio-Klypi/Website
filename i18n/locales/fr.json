@@ -102,6 +102,67 @@
     "seo": {
       "title": "Studio Klypi - Développement web et Photographie",
       "description": "Bienvenue chez Studio Klypi. Ici, on mêle développement web et photographie pour développer des produits UNIQUES ! Venez découvrir notre travail."
+    },
+    "sections": {
+      "hero": {
+        "title": "Donner vie aux projets, à travers le {digital} et l'{image}.",
+        "description": "Nous concevons des sites, des applications et des contenus visuels pensés pour durer, performer et marquer les espris.",
+        "action": "Démarrer un projet",
+        "timing": "Réponse sous 24-48h",
+        "replacements": {
+          "digital": "digital",
+          "image": "image"
+        }
+      },
+      "domains": {
+        "title": "Expertises",
+        "web": {
+          "title": "Développement web",
+          "description": "Conception de sites internet et d'applications sur me sure, pensés pour être performants, évolutifs et adaptés à vos objectifs."
+        },
+        "photo": {
+          "title": "Photographie",
+          "description": "Création de visuels professionnels pour valoriser votre image, capturer des événements ou construire une identité forte."
+        },
+        "video": {
+          "title": "Vidéo",
+          "description": "Réalisation de contenus vidéo pour présenter, raconter et mettre en mouvement vos projets avec impact."
+        }
+      },
+      "why-klypi": {
+        "title": "Pourquoi Klypi ?",
+        "description": "Chaque projet est différent.\nNotre approche aussi.",
+        "reasons": {
+          "approach": {
+            "title": "Une approche produit",
+            "description": "Chaque projet est pensé dans sa globalité : objectifs, utilisateurs, évolutivité.\nNous ne créons pas simplement des sites ou des visuels, mais des outils conçus pour durer et performer."
+          },
+          "details": {
+            "title": "Une exigence dans les détails",
+            "description": "Design, perforance, expérience utilisateur, qualité des images...\nRien n'est laissé au hasard. Chaque élément est travaillé avec précision."
+          },
+          "consulting": {
+            "title": "Un accompagnement humain",
+            "description": "Un interlocuteur unique, des échanges clairs et une collaboration fluide.\nNous avançons ensemble, à chaque étape du projet."
+          },
+          "vision": {
+            "title": "Une vision hybride",
+            "description": "Développement, image, vidéo : Studio Klypi réunit plusieurs expertises pour proposer des projets cohérents et complets."
+          }
+        }
+      },
+      "projects": {
+        "title": "Projets sélectionnés",
+        "description": "Une sélection de projets conçus pour des entreprises, des entrepreneurs et des particuliers.\nChaque réasliation est pensée pour répondre à un besoin concret, avec une attention particulière portée à l'expérience et à la qualité."
+      },
+      "testimonials": {
+        "title": "Ils nous ont fait confiance"
+      },
+      "cta": {
+        "title": "Parlons de votre projet",
+        "description": "Vous avez une idée, un besoin ou simplement une question ?\nStudio Klypi vous accompagne dans la création de votre projet digital ou visuel, de la réflexion à la réalisation.",
+        "action": "Présentez votre projet"
+      }
     }
   },
   "services": {
