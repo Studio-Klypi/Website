@@ -17,7 +17,7 @@ defineProps<ServiceCardProps>();
     </UiCardHeader>
 
     <UiCardFooter
-      v-if="false"
+      v-if="path && false"
       class="mt-auto"
     >
       <UiButton

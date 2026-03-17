@@ -5,5 +5,5 @@ export interface ServiceCardProps extends ComponentProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  path: string;
+  path?: string;
 }
