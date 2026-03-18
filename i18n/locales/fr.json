@@ -42,7 +42,8 @@
     },
     "state": {
       "optional": "(facultatif) | (facultative)"
-    }
+    },
+    "search": "Rechercher"
   },
   "toasts": {
     "message-sent": {
@@ -199,6 +200,27 @@
           "title": "Tournage vidéo",
           "description": "Production de vidéos pour présenter un projet, une entreprise ou raconter une histoire à travers l’image."
         }
+      },
+      "cta": {
+        "title": "Parlons de votre projet",
+        "description": "Vous avez une idée, un besoin ou simplement une question ?\nStudio Klypi vous accompagne dans la création de votre projet digital ou visuel, de la réflexion à la réalisation.",
+        "action": "Présentez votre projet"
+      }
+    }
+  },
+  "projects": {
+    "navigation-name": "Projets",
+    "home": {
+      "seo": {
+        "title": "Studio Klypi - Nos réalisations",
+        "description": "Découvrez une sélection de projets réalisés pour des entreprises, des entrepreneurs et des particuliers. Chaque réalisation reflète une approche mêlant exigence, créativité et attention aux détails."
+      },
+      "title": "Projets",
+      "description": "Découvrez une sélection de projets réalisés pour des entreprises, des entrepreneurs et des particuliers.\nChaque réalisation reflète une approche mêlant exigence, créativité et attention aux détails.",
+      "empty": {
+        "title": "C'est vide par ici...",
+        "description": "Il semblerait qu'il n'y ait aucun projet sélectionné pour le moment.",
+        "description-by-search": "Il semblerait qu'aucun projet ne corresponde à votre rechercher."
       },
       "cta": {
         "title": "Parlons de votre projet",
