@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { cn } from "~/lib/utils";
 import type { PageProps } from "~/components/composing/index";
+import Wrapper from "~/components/composing/Wrapper.vue";
 
 const { t } = useI18n();
 
@@ -24,12 +25,12 @@ else if (props.seoKey) useSeoMeta({
     :data-page-name="props.name"
     :class="cn('@container/page', props.class)"
   >
-    <div
+    <Wrapper
       v-if="props.wrapper"
       :class="cn('', props.wrapperClass)"
     >
       <slot />
-    </div>
+    </Wrapper>
     <slot v-else />
   </main>
 </template>

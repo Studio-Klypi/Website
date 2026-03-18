@@ -9,14 +9,22 @@ export const useProjectStore = defineStore("project", {
   getters: {
     apiUrl: () => useRuntimeConfig().public.api.url,
     hasFirstLoaded: state => state.totalEntities >= 0,
+    pages: state => state.totalEntities < 1 ? 0 : Math.ceil(state.totalEntities / state.loadElementCount),
   },
   actions: {
-    async getProjects() {
+    async getProjects(page: number = 1) {
       this.loading.list = true;
 
       try {
-        const response = await $fetch<ApiListResponse<Project>>(`${this.apiUrl}/projects`);
+        const response = await $fetch<ApiListResponse<Project>>(`${this.apiUrl}/projects`, {
+          query: {
+            page,
+            offset: this.loadElementCount,
+          },
+        });
         this.projects = response.data;
+        this.activePage = page;
+        this.totalEntities = response.meta.total;
       }
       catch (e) {
         console.error(e);
@@ -40,6 +48,21 @@ export const useProjectStore = defineStore("project", {
       }
       finally {
         this.loading.specimen = false;
+      }
+    },
+
+    async searchProjects(keywords: string) {
+      try {
+        const response = await $fetch<ApiListResponse<Project>>(`${this.apiUrl}/projects`, {
+          query: {
+            search: keywords,
+          },
+        });
+        this.projects = response.data;
+        this.totalEntities = response.meta.total;
+      }
+      catch {
+        console.error("nope");
       }
     },
   },
