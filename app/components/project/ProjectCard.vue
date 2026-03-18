@@ -6,12 +6,9 @@ defineProps<{ project: Project }>();
 
 <template>
   <UiCard class="relative pt-2 gap-4 hover:scale-103 hover:border-primary transition-all duration-100">
-    <div
-      v-if="project.banner"
-      class="px-2"
-    >
+    <div class="px-2">
       <NuxtImg
-        :src="project.banner"
+        :src="project.banner || 'https://picsum.photos/1920/1080?random'"
         class="w-full aspect-video object-cover rounded-sm"
         :placeholder="[50, 50, 25, 75]"
       />
