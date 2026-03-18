@@ -153,7 +153,8 @@
       },
       "projects": {
         "title": "Projets sélectionnés",
-        "description": "Une sélection de projets conçus pour des entreprises, des entrepreneurs et des particuliers.\nChaque réasliation est pensée pour répondre à un besoin concret, avec une attention particulière portée à l'expérience et à la qualité."
+        "description": "Une sélection de projets conçus pour des entreprises, des entrepreneurs et des particuliers.\nChaque réasliation est pensée pour répondre à un besoin concret, avec une attention particulière portée à l'expérience et à la qualité.",
+        "see-all": "Découvrir tous les projets"
       },
       "testimonials": {
         "title": "Ils nous ont fait confiance"

@@ -191,9 +191,23 @@ loadTestimonials();
               </UiCarouselItem>
             </UiCarouselContent>
 
-            <div class="flex items-center gap-2 justify-center">
-              <UiCarouselPrevious class="relative inset-[inherit] translate-none" />
-              <UiCarouselNext class="relative inset-[inherit] translate-none" />
+            <div class="flex flex-col @xl/page:flex-row items-center gap-2 @xl/page:justify-between">
+              <div class="flex items-center gap-2">
+                <UiCarouselPrevious class="relative inset-[inherit] translate-none" />
+                <UiCarouselNext class="relative inset-[inherit] translate-none" />
+              </div>
+
+              <UiButton
+                size="sm"
+                variant="link"
+                class="text-foreground!"
+                as-child
+              >
+                <NuxtLinkLocale to="/projects">
+                  {{ $t("home.sections.projects.see-all") }}
+                  <ArrowRight />
+                </NuxtLinkLocale>
+              </UiButton>
             </div>
           </UiCarousel>
         </main>
