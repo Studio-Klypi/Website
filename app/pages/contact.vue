@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SendHorizontal, Info, ArrowRight } from "lucide-vue-next";
+import { SendHorizontal, Info } from "lucide-vue-next";
 import Page from "~/components/composing/Page.vue";
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
@@ -43,7 +43,7 @@ const submit = form.handleSubmit(async (values) => {
   <Page
     name="contact"
     seo-key="contact"
-    class="flex flex-col *:py-32"
+    class="flex flex-col *:py-32 *:px-6"
   >
     <section id="form">
       <Wrapper class="flex flex-col gap-10">
