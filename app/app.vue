@@ -9,7 +9,10 @@ const theme = useTheme();
   <div>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
-    <NuxtLayout />
+
+    <UiTooltipProvider>
+      <NuxtLayout />
+    </UiTooltipProvider>
 
     <ClientOnly>
       <Toaster
