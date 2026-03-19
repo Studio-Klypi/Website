@@ -9,7 +9,7 @@ const { projects, load: loadProjects } = useProjects();
 const { testimonials, load: loadTestimonials } = useTestimonials();
 
 loadProjects();
-loadTestimonials();
+loadTestimonials(3);
 </script>
 
 <template>
