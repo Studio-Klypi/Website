@@ -269,6 +269,8 @@
       "title": "Studio Klypi - Nous contacter",
       "description": "Vous avez un projet, vous souhaitez vous associer ou nous sponsoriser ? Contactez-nous !"
     },
+    "title": "Parlons de votre projet",
+    "description": "Vous avez une idée, un besoin ou une ambition ?\nStudio Klypi vous accompagne dans la conception de votre projet digital ou visuel, de la réflexion à la réalisation.",
     "form": {
       "fields": {
         "type": {
@@ -293,6 +295,9 @@
             "max-length": "Le sujet ne doit pas dépasser {count} caractères !"
           }
         }
+      },
+      "warning": {
+        "response-delay": "Réponse sous 24 à 48h. Chaque demande est étudiée avec attention."
       }
     }
   },
