@@ -5,9 +5,11 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
 import { TESTIMONIAL_MESSAGE_MAX_LENGTH, TESTIMONIAL_ROLE_MAX_LENGTH } from "~/types/entities/testimonial";
+import { rand } from "@vueuse/core";
 
 const { t } = useI18n();
 
+const { testimonials, load } = useTestimonials();
 const { loading, send } = useTestimonialForm();
 
 const form = useForm({
@@ -26,13 +28,31 @@ const submit = form.handleSubmit(async (values) => {
   });
   navigateTo(useLocalePath()("/"));
 });
+
+load();
+
+function getRandomNumber() {
+  return rand(1, 99);
+}
 </script>
 
 <template>
   <Page
     name="testimonials.new"
     seo-key="new-testimonial"
+    class="px-6 py-32"
+    wrapper
+    wrapper-class="flex flex-col gap-24"
   >
+    <header class="grid gap-1.5">
+      <h1 class="text-3xl font-bold">
+        {{ $t("new-testimonial.title") }}
+      </h1>
+      <p class="text-muted-foreground leading-relaxed whitespace-pre-line">
+        {{ $t("new-testimonial.description") }}
+      </p>
+    </header>
+
     <form
       class="grid @lg/page:grid-cols-2 gap-4 items-start"
       @submit="submit"
@@ -115,7 +135,11 @@ const submit = form.handleSubmit(async (values) => {
         </UiFormItem>
       </UiFormField>
 
-      <div class="flex items-center justify-end @lg/page:col-span-2">
+      <div class="flex flex-col-reverse @xl/page:flex-row @xl/page:items-center @xl/page:justify-between gap-2 @xl/page:gap-4 @lg/page:col-span-2">
+        <p class="text-sm text-muted-foreground">
+          {{ $t("new-testimonial.form.disclaimer") }}
+        </p>
+
         <UiButton type="submit">
           {{ $t("btn.send") }}
           <UiSpinner v-if="loading" />
@@ -123,5 +147,53 @@ const submit = form.handleSubmit(async (values) => {
         </UiButton>
       </div>
     </form>
+
+    <div class="relative flex flex-col gap-4 after:absolute after:inset-0 after:bg-linear-[to_right,var(--color-background)_0%,transparent_30%,transparent_70%,var(--color-background)_100%]">
+      <UiMarquee
+        :repeat="10"
+        class="[--duration:10s]"
+      >
+        <UiCard
+          v-for="testimonial in testimonials.slice(0, testimonials.length / 2)"
+          :key="testimonial.id"
+          class="min-w-80"
+        >
+          <UiCardHeader class="flex flex-col">
+            <UiAvatar>
+              <UiAvatarImage :src="testimonial.avatar ?? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`" />
+              <UiAvatarFallback>
+                {{ testimonial.firstName[0] }}{{ testimonial.lastName[0] }}
+              </UiAvatarFallback>
+            </UiAvatar>
+            <UiCardTitle>"{{ testimonial.text }}"</UiCardTitle>
+            <UiCardDescription>{{ testimonial.firstName }} {{ testimonial.lastName }}{{ testimonial.role ? `- ${testimonial.role}` : "" }}</UiCardDescription>
+          </UiCardHeader>
+        </UiCard>
+      </UiMarquee>
+      <UiMarquee
+        reverse
+        :repeat="10"
+        class="[--duration:10s]"
+      >
+        <UiCard
+          v-for="testimonial in testimonials.slice(testimonials.length / 2)"
+          :key="testimonial.id"
+          class="min-w-80"
+        >
+          <UiCardHeader class="flex flex-col">
+            <UiAvatar>
+              <UiAvatarImage :src="testimonial.avatar ?? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`" />
+              <UiAvatarFallback>
+                {{ testimonial.firstName[0] }}{{ testimonial.lastName[0] }}
+              </UiAvatarFallback>
+            </UiAvatar>
+            <UiCardTitle>"{{ testimonial.text }}"</UiCardTitle>
+            <UiCardDescription>{{ testimonial.firstName }} {{ testimonial.lastName }}{{ testimonial.role ? `- ${testimonial.role}` : "" }}</UiCardDescription>
+          </UiCardHeader>
+        </UiCard>
+      </UiMarquee>
+    </div>
+
+    <FaqSection />
   </Page>
 </template>

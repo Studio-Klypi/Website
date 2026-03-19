@@ -307,6 +307,8 @@
       "title": "Studio Klypi - Nouveau témoignage",
       "description": "Un témoignage constructif permet de construire la réalité de Studio Klypi. Rédigez le vôtre pour faire connaître votre expérience avec notre accompagnement."
     },
+    "title": "Partager votre expérience",
+    "description": "Vous avez collaboré avec Studio Klypi ?\nPrenez quelques instants pour partager votre retour.\n\nChaque témoignage contribue à faire évoluer le studio et à guider de futurs projets.",
     "form": {
       "fields": {
         "role": {
@@ -314,7 +316,8 @@
           "placeholder": "Développeur web, photographe, ...",
           "error": "La fonction ne doit pas dépasser {count} caractères !"
         }
-      }
+      },
+      "disclaimer": "Quelques lignes suffisent. Merci pour votre confiance."
     }
   }
 }
