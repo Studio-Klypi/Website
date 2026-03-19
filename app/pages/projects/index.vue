@@ -116,7 +116,10 @@ const { search, clear } = useSearch(
       </footer>
     </Wrapper>
 
-    <section class="bg-accent text-accent-foreground py-32">
+    <section
+      id="cta"
+      class="bg-accent text-accent-foreground py-32"
+    >
       <Wrapper class="flex flex-col gap-1.5 items-center">
         <h2 class="text-2xl font-bold text-center">
           {{ $t("home.sections.cta.title") }}
@@ -136,6 +139,12 @@ const { search, clear } = useSearch(
             <ArrowRight />
           </NuxtLinkLocale>
         </UiButton>
+      </Wrapper>
+    </section>
+
+    <section id="faq">
+      <Wrapper>
+        <FaqSection />
       </Wrapper>
     </section>
   </Page>
