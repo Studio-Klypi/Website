@@ -148,7 +148,10 @@ function getRandomNumber() {
       </div>
     </form>
 
-    <div class="relative flex flex-col gap-4 after:absolute after:inset-0 after:bg-linear-[to_right,var(--color-background)_0%,transparent_30%,transparent_70%,var(--color-background)_100%]">
+    <div
+      v-if="testimonials.length"
+      class="relative flex flex-col gap-4 after:absolute after:inset-0 after:bg-linear-[to_right,var(--color-background)_0%,transparent_30%,transparent_70%,var(--color-background)_100%]"
+    >
       <UiMarquee
         :repeat="10"
         class="[--duration:10s]"
