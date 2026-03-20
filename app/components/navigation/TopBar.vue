@@ -3,11 +3,9 @@ import { Menu } from "lucide-vue-next";
 import { LINKS } from "~/components/navigation/index";
 import Logo from "~/components/brand/Logo.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
-import Flag from "~/components/brand/Flag.vue";
 import ThemeSwitcher from "~/components/interface/ThemeSwitcher.vue";
 import LangSwitcher from "~/components/interface/LangSwitcher.vue";
 
-const { locale } = useI18n();
 const { isMobile } = useResponsive();
 </script>
 
