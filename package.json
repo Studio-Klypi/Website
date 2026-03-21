@@ -34,6 +34,7 @@
     "date-fns": "^4.1.0",
     "embla-carousel-vue": "^8.6.0",
     "flag-icons": "^7.5.0",
+    "lucide-vue-next": "^0.577.0",
     "markdown-it": "^14.1.1",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-anchor": "^9.2.0",
