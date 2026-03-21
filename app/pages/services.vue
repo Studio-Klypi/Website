@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRight } from "lucide-vue-next";
+import { ArrowRight } from "@lucide/vue";
 import Page from "~/components/composing/Page.vue";
 import ServiceCard from "~/components/services/ServiceCard.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";

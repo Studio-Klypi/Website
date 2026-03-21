@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ArrowLeft, ArrowRight } from "lucide-vue-next";
+import { ArrowLeft, ArrowRight } from "@lucide/vue";
 import { AnimatePresence, Motion } from "motion-v";
 import type { Listed } from "~/types/generic/object";
 import type { Testimonial } from "~/types/entities/testimonial";

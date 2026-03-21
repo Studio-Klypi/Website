@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Linkedin, Instagram } from "lucide-vue-next";
+import { Linkedin, Instagram } from "@lucide/vue";
 import type { TeamMemberCardProps } from "~/components/team/index";
 import { cn } from "~/lib/utils";
 

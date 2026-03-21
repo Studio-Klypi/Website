@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SendHorizontal } from "lucide-vue-next";
+import { SendHorizontal } from "@lucide/vue";
 import Page from "~/components/composing/Page.vue";
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";

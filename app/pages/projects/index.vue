@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Search, X, Folder, ArrowRight } from "lucide-vue-next";
+import { Search, X, Folder, ArrowRight } from "@lucide/vue";
 import Page from "~/components/composing/Page.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
 

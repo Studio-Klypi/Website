@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu } from "lucide-vue-next";
+import { Menu } from "@lucide/vue";
 import { LINKS } from "~/components/navigation/index";
 import Logo from "~/components/brand/Logo.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
