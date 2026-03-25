@@ -335,6 +335,24 @@
       "disclaimer": "Quelques lignes suffisent. Merci pour votre confiance."
     }
   },
+  "testimonials": {
+    "seo": {
+      "title": "Studio Klypi - Vos témoignages",
+      "description": "Découvrez les témoignages de clients ayant collaboré avec Studio Klypi. Retours d’expérience, projets réalisés et satisfaction au cœur de chaque collaboration."
+    },
+    "title": "Vos témoignages",
+    "description": "Découvrez les témoignages de clients ayant collaboré avec Studio Klypi. Retours d’expérience, projets réalisés et satisfaction au cœur de chaque collaboration.",
+    "empty": {
+      "default": {
+        "title": "Oups...",
+        "description": "Il semblerait qu'aucun témoignage n'ai été écrit à ce jour."
+      },
+      "no-for-active-page": {
+        "title": "Oups...",
+        "description": "Il semblerait qu'aucun témoignage n'ai été trouvé pour cette page."
+      }
+    }
+  },
 
   "legal": {
     "terms": {

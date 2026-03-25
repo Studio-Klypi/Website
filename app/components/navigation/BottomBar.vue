@@ -69,9 +69,11 @@ const currentYear = new Date().getFullYear();
               variant="link"
               size="sm"
               class="px-0! text-foreground!"
-              disabled
+              as-child
             >
-              {{ $t("layout.footer.sections.links.all-testimonials") }}
+              <NuxtLinkLocale to="/testimonials">
+                {{ $t("layout.footer.sections.links.all-testimonials") }}
+              </NuxtLinkLocale>
             </UiButton>
             <UiButton
               variant="link"
