@@ -20,7 +20,7 @@ const { search, clear } = useSearch(
   <Page
     seo-key="projects.home"
     name="projects.home"
-    class="py-16 flex flex-col gap-32"
+    class="py-16 flex flex-col gap-32 *:px-6"
   >
     <Wrapper class="flex flex-col gap-6">
       <header class="grid gap-1.5">

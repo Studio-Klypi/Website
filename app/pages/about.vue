@@ -23,7 +23,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
       </div>
     </section>
     <section id="story">
-      <div class="w-full max-w-[90ch] mx-auto flex items-center gap-12">
+      <div class="w-full max-w-[90ch] mx-auto flex flex-col-reverse @4xl/page:flex-row @4xl/page:items-center gap-12">
         <div class="grid gap-1.5 flex-1">
           <h2 class="text-2xl font-bold">
             {{ $t("about.sections.story.title") }}
@@ -35,7 +35,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
         </div>
 
         <NuxtImg
-          class="aspect-3/5 object-cover w-80 rounded-xl"
+          class="aspect-video @4xl/page:aspect-3/5 w-full @4xl/page:w-80 object-top @4xl/page:object-center object-cover rounded-xl"
           src="/images/team/loic/photo-1.webp"
           :placeholder="[50, 50, 25, 75]"
         />
@@ -49,7 +49,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
         <div class="flex items-center justify-center isolate py-4">
           <TeamMemberCard
-            v-if="false"
+            v-if="true"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
@@ -66,7 +66,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
             class="z-1 -translate-y-1.5"
           />
           <TeamMemberCard
-            v-if="false"
+            v-if="true"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
