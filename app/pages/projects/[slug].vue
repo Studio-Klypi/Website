@@ -17,7 +17,7 @@ const project = ref<Project>(await store.getProject(slug as string));
 <template>
   <Page
     :seo-data="{
-      title: project.title,
+      title: `${project.title} · Studio Klypi`,
       description: project.description,
       author: 'Studio Klypi',
     }"

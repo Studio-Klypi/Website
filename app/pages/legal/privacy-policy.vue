@@ -6,10 +6,11 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 <template>
   <Page
     name="legal.privacy-policy"
+    seo-key="legal.privacy"
     class="py-24"
     wrapper
     wrapper-class="max-w-2xl"
   >
-    <MarkdownRenderer :content="$t('legal.privacy')" />
+    <MarkdownRenderer :content="$t('legal.privacy.content')" />
   </Page>
 </template>
