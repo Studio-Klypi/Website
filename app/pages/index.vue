@@ -6,10 +6,11 @@ import ServiceCard from "~/components/services/ServiceCard.vue";
 import WhyCard from "~/components/home/WhyCard.vue";
 
 const { projects, load: loadProjects } = useProjects();
-const { testimonials, load: loadTestimonials } = useTestimonials();
+
+const testimonialsStore = useTestimonialStore();
+const { recent } = storeToRefs(testimonialsStore);
 
 loadProjects();
-loadTestimonials(3);
 </script>
 
 <template>
@@ -214,7 +215,7 @@ loadTestimonials(3);
       </Wrapper>
     </section>
 
-    <template v-if="testimonials.length">
+    <template v-if="recent.length">
       <Wrapper>
         <UiSeparator />
       </Wrapper>
@@ -231,7 +232,7 @@ loadTestimonials(3);
           </header>
 
           <main>
-            <UiAnimatedTestimonials :testimonials />
+            <UiAnimatedTestimonials :testimonials="recent" />
           </main>
         </Wrapper>
       </section>

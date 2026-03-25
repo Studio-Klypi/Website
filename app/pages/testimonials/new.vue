@@ -5,12 +5,12 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { z } from "zod";
 import { TESTIMONIAL_MESSAGE_MAX_LENGTH, TESTIMONIAL_ROLE_MAX_LENGTH } from "~/types/entities/testimonial";
-import { rand } from "@vueuse/core";
+import TestimonialCard from "~/components/testimonials/TestimonialCard.vue";
 
 const { t } = useI18n();
 
-const { testimonials, load } = useTestimonials();
-const { loading, send } = useTestimonialForm();
+const store = useTestimonialStore();
+const { testimonials, loading } = storeToRefs(store);
 
 const form = useForm({
   validationSchema: toTypedSchema(z.object({
@@ -22,18 +22,12 @@ const form = useForm({
   })),
 });
 const submit = form.handleSubmit(async (values) => {
-  await send({
+  await store.send({
     ...values,
     role: values.role ?? null,
   });
   navigateTo(useLocalePath()("/"));
 });
-
-load();
-
-function getRandomNumber() {
-  return rand(1, 99);
-}
 </script>
 
 <template>
@@ -156,44 +150,22 @@ function getRandomNumber() {
         :repeat="10"
         class="[--duration:10s]"
       >
-        <UiCard
+        <TestimonialCard
           v-for="testimonial in testimonials.slice(0, testimonials.length / 2)"
           :key="testimonial.id"
-          class="min-w-80"
-        >
-          <UiCardHeader class="flex flex-col">
-            <UiAvatar>
-              <UiAvatarImage :src="testimonial.avatar ?? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`" />
-              <UiAvatarFallback>
-                {{ testimonial.firstName[0] }}{{ testimonial.lastName[0] }}
-              </UiAvatarFallback>
-            </UiAvatar>
-            <UiCardTitle>"{{ testimonial.text }}"</UiCardTitle>
-            <UiCardDescription>{{ testimonial.firstName }} {{ testimonial.lastName }}{{ testimonial.role ? `- ${testimonial.role}` : "" }}</UiCardDescription>
-          </UiCardHeader>
-        </UiCard>
+          :testimonial="testimonial"
+        />
       </UiMarquee>
       <UiMarquee
         reverse
         :repeat="10"
         class="[--duration:10s]"
       >
-        <UiCard
+        <TestimonialCard
           v-for="testimonial in testimonials.slice(testimonials.length / 2)"
           :key="testimonial.id"
-          class="min-w-80"
-        >
-          <UiCardHeader class="flex flex-col">
-            <UiAvatar>
-              <UiAvatarImage :src="testimonial.avatar ?? `https://randomuser.me/api/portraits/men/${getRandomNumber()}.jpg`" />
-              <UiAvatarFallback>
-                {{ testimonial.firstName[0] }}{{ testimonial.lastName[0] }}
-              </UiAvatarFallback>
-            </UiAvatar>
-            <UiCardTitle>"{{ testimonial.text }}"</UiCardTitle>
-            <UiCardDescription>{{ testimonial.firstName }} {{ testimonial.lastName }}{{ testimonial.role ? `- ${testimonial.role}` : "" }}</UiCardDescription>
-          </UiCardHeader>
-        </UiCard>
+          :testimonial="testimonial"
+        />
       </UiMarquee>
     </div>
 
