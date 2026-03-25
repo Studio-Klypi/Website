@@ -95,6 +95,21 @@
           "answer": "Oui. Les projets peuvent être menés entièrement à distance. Les échanges se font principalement en visioconférence, souvent enregistrés afin de conserver un suivi clair et précis des décisions et des avancées du projet."
         }
       ]
+    },
+    "footer": {
+      "rights": "Tous droits réservés",
+      "sections": {
+        "links": {
+          "title": "Liens utiles",
+          "all-testimonials": "Tous les témoignages",
+          "new-testimonial": "Déposer un témoignage"
+        },
+        "legal": {
+          "title": "Documents",
+          "terms": "Mentions légales",
+          "privacy": "Politique de confidentialité"
+        }
+      }
     }
   },
 
