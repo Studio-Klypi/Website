@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-vue-next";
+import type { LucideIcon } from "@lucide/vue";
 import type { ComponentProps } from "~/types/generic/ui";
 
 export interface WhyCardProps extends ComponentProps {

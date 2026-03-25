@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Search, X, Folder, ArrowRight } from "lucide-vue-next";
+import { Search, X, Folder, ArrowRight } from "@lucide/vue";
 import Page from "~/components/composing/Page.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
 
@@ -20,7 +20,7 @@ const { search, clear } = useSearch(
   <Page
     seo-key="projects.home"
     name="projects.home"
-    class="py-16 flex flex-col gap-32"
+    class="py-16 flex flex-col gap-32 *:px-6"
   >
     <Wrapper class="flex flex-col gap-6">
       <header class="grid gap-1.5">

@@ -1,6 +1,6 @@
 import type { Listed } from "~/types/generic/object";
 import type { Service } from "~/types/entities/service";
-import { Aperture, Camera, Clapperboard, Globe, Laptop, Video } from "lucide-vue-next";
+import { Aperture, Camera, Clapperboard, Globe, Laptop, Video } from "@lucide/vue";
 
 export function useServices(): Listed<Service> {
   return [

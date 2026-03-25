@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRight, Laptop, Camera, Video, Handshake, Brain, Target, Zap } from "lucide-vue-next";
+import { ArrowRight, Laptop, Camera, Video, Handshake, Brain, Target, Zap } from "@lucide/vue";
 import Page from "~/components/composing/Page.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
 import ServiceCard from "~/components/services/ServiceCard.vue";
