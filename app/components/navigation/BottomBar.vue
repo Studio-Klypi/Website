@@ -92,17 +92,21 @@ const currentYear = new Date().getFullYear();
               variant="link"
               size="sm"
               class="px-0! text-foreground!"
-              disabled
+              as-child
             >
-              {{ $t("layout.footer.sections.legal.terms") }}
+              <NuxtLinkLocale to="/legal/terms">
+                {{ $t("layout.footer.sections.legal.terms") }}
+              </NuxtLinkLocale>
             </UiButton>
             <UiButton
               variant="link"
               size="sm"
               class="px-0! text-foreground!"
-              disabled
+              as-child
             >
-              {{ $t("layout.footer.sections.legal.privacy") }}
+              <NuxtLinkLocale to="/legal/privacy-policy">
+                {{ $t("layout.footer.sections.legal.privacy") }}
+              </NuxtLinkLocale>
             </UiButton>
           </div>
         </div>
