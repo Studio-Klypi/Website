@@ -49,7 +49,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
 
         <div class="flex flex-col gap-4 @3xl/page:gap-0 @3xl/page:flex-row items-center @3xl/page:justify-center isolate py-4">
           <TeamMemberCard
-            v-if="true"
+            v-if="false"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
@@ -66,7 +66,7 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
             class="@3xl/page:z-1 @3xl/page:-translate-y-1.5"
           />
           <TeamMemberCard
-            v-if="true"
+            v-if="false"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
