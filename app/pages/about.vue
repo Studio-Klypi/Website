@@ -47,15 +47,15 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
           {{ $t("about.sections.team.title") }}
         </h2>
 
-        <div class="flex items-center justify-center isolate py-4">
+        <div class="flex flex-col gap-4 @3xl/page:gap-0 @3xl/page:flex-row items-center @3xl/page:justify-center isolate py-4">
           <TeamMemberCard
-            v-if="true"
+            v-if="false"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
             linkedin="maesloic"
             instagram="ms.loic"
-            class="-rotate-3 translate-y-1.5 translate-x-3"
+            class="@3xl/page:-rotate-3 @3xl/page:translate-y-1.5 @3xl/page:translate-x-3"
           />
           <TeamMemberCard
             image="/images/team/loic/photo-1.webp"
@@ -63,16 +63,16 @@ import MarkdownRenderer from "~/components/text-render/MarkdownRenderer.vue";
             :job="$t('about.sections.team.jobs.loic')"
             linkedin="maesloic"
             instagram="ms.loic"
-            class="z-1 -translate-y-1.5"
+            class="@3xl/page:z-1 @3xl/page:-translate-y-1.5"
           />
           <TeamMemberCard
-            v-if="true"
+            v-if="false"
             image="/images/team/loic/photo-1.webp"
             name="Loïc MAES"
             :job="$t('about.sections.team.jobs.loic')"
             linkedin="maesloic"
             instagram="ms.loic"
-            class="rotate-3 translate-y-1.5 -translate-x-3"
+            class="@3xl/page:rotate-3 @3xl/page:translate-y-1.5 @3xl/page:-translate-x-3"
           />
         </div>
 
