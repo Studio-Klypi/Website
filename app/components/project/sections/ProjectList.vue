@@ -8,7 +8,10 @@ defineProps<{ section: ProjectListSection }>();
 
 <template>
   <div class="flex flex-col gap-1.5">
-    <h2 v-if="section.content.title">
+    <h2
+      v-if="section.content.title"
+      class="text-2xl font-bold"
+    >
       {{ section.content.title }}
     </h2>
     <ProjectUnorderedList
