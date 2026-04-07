@@ -15,6 +15,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      meta: [
+        {
+          name: "google-site-verification",
+          content: "O-qdjeRNhcsgyJrRu3qCaLn2uQmvPjMGAFkItaI6Cek",
+        },
+      ],
       link: [
         {
           rel: "icon",
