@@ -24,7 +24,7 @@ const project = ref<Project>(await store.getProject(slug as string));
     :name="`project.${project.slug}`"
     class="p-4 w-full"
     wrapper
-    wrapper-class="w-full max-w-4xl mx-auto flex flex-col gap-4 *:px-6"
+    wrapper-class="w-full max-w-4xl mx-auto flex flex-col gap-6 *:px-6"
   >
     <header class="px-0! flex flex-col gap-4">
       <NuxtImg
@@ -37,13 +37,10 @@ const project = ref<Project>(await store.getProject(slug as string));
         <h1 class="text-4xl font-bold">
           {{ project.title }}
         </h1>
-        <p class="text-muted-foreground">
-          {{ project.description }}
-        </p>
       </div>
     </header>
 
-    <main class="flex flex-col gap-8">
+    <main class="flex flex-col gap-12">
       <ProjectSection
         v-for="section in project.sections"
         :key="section.key"
@@ -51,7 +48,7 @@ const project = ref<Project>(await store.getProject(slug as string));
       />
     </main>
 
-    <footer class="flex items-center justify-end">
+    <footer class="flex items-center justify-end mt-6">
       <span class="text-sm text-muted-foreground italic">{{ $t("labels.dates.updated-at", 1, { named: { date: formatDate(project.updatedAt, $t("labels.dates.formats.medium"), { locale: locales[locale] }) } }) }}</span>
     </footer>
   </Page>
