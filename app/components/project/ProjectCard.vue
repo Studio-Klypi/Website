@@ -2,13 +2,15 @@
 import type { Project } from "~/types/entities/project";
 
 defineProps<{ project: Project }>();
+
+const apiUrl = useRuntimeConfig().public.api.url;
 </script>
 
 <template>
   <UiCard class="relative pt-2 gap-4 hover:scale-103 hover:border-primary transition-all duration-100">
     <div class="px-2">
       <NuxtImg
-        :src="project.banner || 'https://picsum.photos/1920/1080?random'"
+        :src="`${apiUrl}/projects/${project.id}/banner`"
         class="w-full aspect-video object-cover rounded-sm"
         :placeholder="[50, 50, 25, 75]"
       />
