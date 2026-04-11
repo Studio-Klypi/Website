@@ -12,6 +12,7 @@ const route = useRoute();
 const { slug } = route.params;
 
 const project = ref<Project>(await store.getProject(slug as string));
+const apiUrl = useRuntimeConfig().public.api.url;
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const project = ref<Project>(await store.getProject(slug as string));
     <header class="px-0! flex flex-col gap-4">
       <NuxtImg
         v-if="project.banner"
-        :src="project.banner"
+        :src="`${apiUrl}/projects/${project.id}/banner`"
         class="aspect-8/3 object-cover object-center rounded-xl"
       />
 
