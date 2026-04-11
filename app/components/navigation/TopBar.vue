@@ -5,6 +5,7 @@ import Logo from "~/components/brand/Logo.vue";
 import Wrapper from "~/components/composing/Wrapper.vue";
 import ThemeSwitcher from "~/components/interface/ThemeSwitcher.vue";
 import LangSwitcher from "~/components/interface/LangSwitcher.vue";
+import SheetNavigation from "~/components/navigation/SheetNavigation.vue";
 
 const { isMobile } = useResponsive();
 </script>
@@ -23,49 +24,7 @@ const { isMobile } = useResponsive();
       </NuxtLinkLocale>
 
       <ClientOnly>
-        <UiSheet v-if="isMobile">
-          <UiSheetTrigger as-child>
-            <UiButton
-              size="icon"
-              variant="ghost"
-            >
-              <Menu />
-            </UiButton>
-          </UiSheetTrigger>
-          <UiSheetContent
-            side="right"
-            class="max-w-xs"
-          >
-            <UiSheetHeader class="flex flex-row items-center gap-1">
-              <Logo class="size-9" />
-              <p class="font-semibold">
-                Studio Klypi
-              </p>
-            </UiSheetHeader>
-
-            <div class="grid gap-0.5 px-4">
-              <UiButton
-                v-for="link in LINKS"
-                :key="link.key"
-                variant="ghost"
-                class="justify-start"
-                as-child
-              >
-                <NuxtLinkLocale
-                  :to="link.path"
-                  active-class="bg-accent! text-accent-foreground!"
-                >
-                  {{ $t(`${link.key}.navigation-name`) }}
-                </NuxtLinkLocale>
-              </UiButton>
-            </div>
-
-            <UiSheetFooter class="flex-row justify-center">
-              <ThemeSwitcher />
-              <LangSwitcher />
-            </UiSheetFooter>
-          </UiSheetContent>
-        </UiSheet>
+        <SheetNavigation v-if="isMobile" />
         <nav
           v-else
           class="flex items-center gap-0.5"
@@ -91,49 +50,7 @@ const { isMobile } = useResponsive();
         </nav>
 
         <template #fallback>
-          <UiSheet>
-            <UiSheetTrigger as-child>
-              <UiButton
-                size="icon"
-                variant="ghost"
-              >
-                <Menu />
-              </UiButton>
-            </UiSheetTrigger>
-            <UiSheetContent
-              side="right"
-              class="max-w-xs"
-            >
-              <UiSheetHeader class="flex flex-row items-center gap-1">
-                <Logo class="size-9" />
-                <p class="font-semibold">
-                  Studio Klypi
-                </p>
-              </UiSheetHeader>
-
-              <div class="grid gap-0.5 px-4">
-                <UiButton
-                  v-for="link in LINKS"
-                  :key="link.key"
-                  variant="ghost"
-                  class="justify-start"
-                  as-child
-                >
-                  <NuxtLinkLocale
-                    :to="link.path"
-                    active-class="bg-accent! text-accent-foreground!"
-                  >
-                    {{ $t(`${link.key}.navigation-name`) }}
-                  </NuxtLinkLocale>
-                </UiButton>
-              </div>
-
-              <UiSheetFooter class="flex-row justify-center">
-                <ThemeSwitcher />
-                <LangSwitcher />
-              </UiSheetFooter>
-            </UiSheetContent>
-          </UiSheet>
+          <SheetNavigation />
         </template>
       </ClientOnly>
     </Wrapper>
