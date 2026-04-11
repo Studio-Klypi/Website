@@ -7,10 +7,10 @@ const apiUrl = useRuntimeConfig().public.api.url;
 </script>
 
 <template>
-  <UiCard>
-    <div class="px-6">
+  <UiCard class="relative overflow-hidden">
+    <div class="w-full px-6">
       <NuxtImg
-        class="aspect-4/3 @lg:aspect-2/1 rounded-sm"
+        class="w-full aspect-4/3 @lg:aspect-2/1 rounded-sm object-cover"
         :src="`${apiUrl}/projects/${project.id}/banner`"
       />
     </div>
@@ -22,5 +22,10 @@ const apiUrl = useRuntimeConfig().public.api.url;
         {{ project.description }}
       </UiCardDescription>
     </UiCardHeader>
+
+    <NuxtLinkLocale
+      :to="`/projects/${project.id}-${project.slug}`"
+      class="absolute inset-0"
+    />
   </UiCard>
 </template>
