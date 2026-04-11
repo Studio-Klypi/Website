@@ -53,7 +53,7 @@ const { search, clear } = useSearch(
 
         <div
           v-if="!hasFirstLoaded && loading.list"
-          class="grid grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-4"
+          class="grid grid-cols-1 @md:grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-4"
         >
           <UiSkeleton
             v-for="i in 4"
