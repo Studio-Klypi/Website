@@ -6,7 +6,7 @@ const props = defineProps<ComponentProps>();
 </script>
 
 <template>
-  <div :class="cn('w-full max-w-4xl mx-auto', props.class)">
+  <div :class="cn('@container/wrapper w-full max-w-4xl mx-auto', props.class)">
     <slot />
   </div>
 </template>
