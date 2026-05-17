@@ -5,10 +5,12 @@ import BottomBar from "~/components/navigation/BottomBar.vue";
 </script>
 
 <template>
-  <Layout>
+  <Layout class="flex flex-col min-h-dvh">
     <TopBar />
 
-    <NuxtPage />
+    <main class="flex-1 flex flex-col min-h-0">
+      <NuxtPage />
+    </main>
 
     <BottomBar />
   </Layout>

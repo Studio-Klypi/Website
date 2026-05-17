@@ -1,6 +1,12 @@
 {
   "btn": {
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "download": {
+      "default": "Télécharger",
+      "all": "Tout télécharger"
+    },
+    "select-all": "Tout sélectionner",
+    "deselect-all": "Tout dé-sélectionner"
   },
   "labels": {
     "dates": {
@@ -53,6 +59,62 @@
     "testimonial-sent": {
       "title": "Merci !",
       "description": "Nous avons bien réceptionné votre témoignage."
+    },
+    "gallery": {
+      "selection": {
+        "partial": {
+          "title": "Super !",
+          "description": "Vous avez sélectionné {selected}/{total} images."
+        },
+        "total": {
+          "title": "Bien reçu !",
+          "description": "Nous lançons la retouche des photos que vous avez sélectionnées."
+        }
+      },
+      "download": {
+        "zip": {
+          "loading": {
+            "title": "Téléchargement lancé !",
+            "description": "Téléchargement de vos photos..."
+          },
+          "success": {
+            "title": "Téléchargement terminé !",
+            "description": "Vos photos ont été téléchargées."
+          },
+          "error": {
+            "title": "Oh non...",
+            "description": "Une erreur est survenue pendant le téléchargement de vos photos."
+          }
+        },
+        "picture": {
+          "loading": {
+            "title": "Téléchargement lancé !",
+            "description": "Téléchargement de votre photo..."
+          },
+          "success": {
+            "title": "Téléchargement terminé !",
+            "description": "Votre photo a été téléchargée."
+          },
+          "error": {
+            "title": "Oh non...",
+            "description": "Une erreur est survenue pendant le téléchargement de votre photo."
+          }
+        },
+        "error": {
+          "forbidden": {
+            "title": "Téléchargement refusé",
+            "description": "Le téléchargement des photos brutes n'est pas autorisé pour cette galerie."
+          },
+          "not-found": {
+            "title": "Photo introuvable",
+            "description": "Une ou plusieurs photos demandées n'existent pas dans cette galerie."
+          },
+          "no-retouch": {
+            "title": "Aucune retouche disponible",
+            "description": "Une ou plusieurs photos n'ont pas encore de retouche disponible."
+          }
+        }
+      }
     },
     "error": {
       "default": {
@@ -351,6 +413,24 @@
         "title": "Oups...",
         "description": "Il semblerait qu'aucun témoignage n'ai été trouvé pour cette page."
       }
+    }
+  },
+  "gallery": {
+    "info": {
+      "date": "Date du shooting",
+      "location": "Lieu du shooting",
+      "quota": "Photos sélectionnées",
+      "expires-at": "Disponible jusqu'au"
+    },
+    "btn": {
+      "select-all": "Tout sélectionner",
+      "deselect-all": "Tout dé-sélectionner",
+      "validate-selection": "Valider la sélection"
+    },
+    "empty": {
+      "title": "Oups...",
+      "description": "Il semblerait que votre galerie soit innaccessible pour le moment.",
+      "action": "Retour à l'accueil"
     }
   },
 
